@@ -3,7 +3,7 @@ choice=""
 
 # 패키지 매니저 선택
 echo "Which package manager would you like to use?"
-select type in "yarn" "pnpm"; do
+select type in "yarn" "pnpm" "quit"; do
   case $type in
     "yarn")
       choice="yarn"
@@ -17,12 +17,12 @@ select type in "yarn" "pnpm"; do
       pnpm install
       break
       ;;
-    "Quit")
+    "quit")
       echo "Exiting..."
-      break
+      exit 0
       ;;
     *)
-      echo "Invalid option. Please select 1, 2, or 3."
+      echo "Invalid option. Please select 1, 2, 3."
       ;;
   esac
 done
