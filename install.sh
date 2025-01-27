@@ -109,6 +109,9 @@ CMD [\"$choice\", \"run\", \"start:debug\"]" > Dockerfile
 # .git 제거
 rm -rf .git
 
+#.env 파일 생성
+touch "config/.env"
+
 # 의존성 추가
 $choice add @nestjs/common @nestjs/config @nestjs/core @nestjs/platform-express nest-winston reflect-metadata rxjs winston
 
